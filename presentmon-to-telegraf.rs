@@ -121,6 +121,7 @@ fn dominant_app(frames: Vec<Frame>) -> Result<(String, Vec<Frame>), Box<dyn Erro
     let mut dominant = None;
 
     for frame in frames {
+        if frame.application == "dwm.exe" { continue } // Ignore Windows "Desktop Window Manager".
         app.entry(frame.application.clone()).and_modify(|f| f.push(frame.clone())).or_insert(vec![frame.clone()]);
         dominant = match (&dominant, frame.application) {
             (None, a)                                                     => Some(a),
