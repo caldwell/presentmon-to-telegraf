@@ -13,7 +13,7 @@ I hook into Telegraf thusly:
 
     [[inputs.exec]]
       commands = [
-         '''"C:\Program Files\Telegraf\presentmon-to-telegraf.exe"'''
+         '''"C:\Program Files\Telegraf\presentmon-to-telegraf.exe" --exe "C:\Program Files\Telegraf\PresentMon-1.8.0-x64.exe"'''
       ]
       timeout = "5s"
       data_format = "influx"
