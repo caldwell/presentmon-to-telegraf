@@ -1,0 +1,14 @@
+[package]
+name = "presentmon-to-telegraf"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "presentmon-to-telegraf"
+path = "presentmon-to-telegraf.rs"
+
+[dependencies]
+csv = "1.2.2"
+dirs = "5.0.1"
+docopt = "1.1.1"
+serde = { version = "1.0.166", features = ["derive"] }
